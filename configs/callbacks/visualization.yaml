@@ -1,0 +1,4 @@
+visualization:
+  _target_: src.models.components.callback.AnomalyVisualizationCallback
+  dirpath: ${paths.output_dir}/visualizations
+  visualize: True

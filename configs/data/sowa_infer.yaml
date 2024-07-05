@@ -1,0 +1,56 @@
+_target_: src.data.anomaly_clip_datamodule.AnomalyCLIPDataModule
+data_dir:
+  train: /home/hzx/Projects/Data/MVTec-AD
+  valid: /home/hzx/Projects/Data/MVTec-AD
+  # test: /home/hzx/Projects/Data/BTAD
+  # test: /home/hzx/Projects/Data/DAGM
+  test: /home/hzx/Projects/Data/DTD-Synthetic
+  # test: /home/hzx/Projects/Data/MPDD
+  # test: /home/hzx/Projects/Data/SDD
+dataset:
+  train:
+    _target_: src.data.components.anomal_dataset.MVTecDataset
+    _partial_: true
+    transform:
+      _target_: src.data.components.transform.ImageTransform
+      image_size: 336
+    mask_transform:
+      _target_: src.data.components.transform.MaskTransform
+      image_size: ${data.image_size}
+    preload: false
+    aug_rate: 0.2
+  valid:
+    _target_: src.data.components.anomal_dataset.VisaDataset
+    _partial_: true
+    transform:
+      _target_: src.data.components.transform.ImageTransform
+      image_size: 336
+    mask_transform:
+      _target_: src.data.components.transform.MaskTransform
+      image_size: ${data.image_size}
+    preload: false
+  test:
+    _target_: src.data.components.anomal_dataset.VisaDataset
+    _partial_: true
+    transform:
+      _target_: src.data.components.transform.ImageTransform
+      image_size: 336
+    mask_transform:
+      _target_: src.data.components.transform.MaskTransform
+      image_size: ${data.image_size}
+    preload: false
+  kshot:
+    _target_: src.data.components.kshot_dataset.VisaKShotDataset
+    _partial_: true
+    k_shot: 4
+    transform:
+      _target_: src.data.components.transform.ImageTransform
+      image_size: 336
+    mask_transform:
+      _target_: src.data.components.transform.MaskTransform
+      image_size: ${data.image_size}
+    preload: false
+image_size: 336
+num_workers: 6
+pin_memory: False
+batch_size: 8

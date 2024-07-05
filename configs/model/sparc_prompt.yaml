@@ -1,0 +1,74 @@
+_target_: src.models.anomaly_clip_module.AnomalyCLIPModule
+
+optimizer:
+  _target_: torch.optim.AdamW
+  _partial_: true
+  lr: 0.001
+  weight_decay: 0.2
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+  _partial_: true
+  mode: min
+  factor: 0.1
+  patience: 5
+
+# scheduler:
+#   _target_: src.models.components.scheduler.WarmupCosineAnnealingLR
+#   _partial_: true
+#   warmup_epochs: 10
+#   total_epoch: 50
+
+net:
+  _target_: src.models.components..sparc.SPARC
+  arch: ViT-L/14@336px
+  image_size: 336
+  temperature: 0.07                     # softmax
+  feature_map_idx: [5, 11, 17, 23]      # [0, 12, 23] [6, 12, 18] [5, 11, 17, 23] index of resnetblock in ViT
+  share_weight: true                    # whether the adapter shares weights for different feature maps
+  prompt_learner:
+    _target_: src.models.components.coop.PromptEncoder
+    _partial_: true
+    tokenizer:
+      _target_: src.models.components.clip.simple_tokenizer.SimpleTokenizer
+    context_length: 77                    # defaut 77 for openai clip
+    truncate: false
+    class_names: ${prompt.class_names}
+    prompt_normal: ${prompt.template.normal}
+    prompt_abnormal: ${prompt.template.abnormal}
+    prompt_templates: ${prompt.template.templates}
+  adapter:
+    _target_: torch.nn.Linear
+    in_features: 1024                   # clip vit feature dim, defaut 1024 for openai clip
+    out_features: 1024
+    bias: false
+    # _target_: src.models.components.adapter.BasicLayer
+    # _partial_: true
+    # input_resolution: [24, 24]          # (image_size - kerner_size) / stride + 1. eg. 24 = (224 - 14) / 14 + 1
+    # window_size: 12
+    # depth: 1                            # if depth < 2, thers is no window shift
+    # num_heads: 8
+    # hidden_features: null               # set null, same as nn.Linear
+    # cpb_dim: 64
+    # value_only: true
+    # drop: 0.0
+    # attn_drop: 0.1
+  fusion:
+    _target_: src.models.components.cross_modal.DotProductFusion
+  embedding_dim: 768                    # clip fusion featrue dim, default 768, only effective for non null
+
+loss:
+  cross_entropy:
+    _target_: torch.nn.CrossEntropyLoss
+  focal:
+    _target_: src.models.components.loss.FocalLoss
+  dice:
+    _target_: src.models.components.loss.BinaryDiceLoss
+
+k_shot: false
+
+filter: true
+
+enable_validation: false
+
+compile: false
