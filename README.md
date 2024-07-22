@@ -13,7 +13,13 @@
 
 ## Description
 
-We introduce a window self-attention mechanism based on the CLIP model, combined with learnable prompts to process multi-level features within a Soldier-Offier Window self-Attention (SOWA) framework.
+Visual anomaly detection is critical in industrial manufacturing, but traditional methods often rely on extensive
+normal datasets and custom models, limiting scalability.
+Recent advancements in large-scale visual-language models have significantly improved zero/few-shot anomaly detection. However, these approaches may not fully utilize hierarchical features, potentially missing nuanced details. We
+introduce a window self-attention mechanism based on the
+CLIP model, combined with learnable prompts to process
+multi-level features within a Soldier-Offier Window selfAttention (SOWA) framework. Our method has been tested
+on five benchmark datasets, demonstrating superior performance by leading in 18 out of 20 metrics compared to existing state-of-the-art techniques.
 
 ## Installation
 
