@@ -76,7 +76,7 @@ python src/train.py trainer=gpu data=sowa_visa model=sowa_hfwa
 ## Results
 
 Comparisons with few-shot (K=4) anomaly detection methods on datasets of MVTec-AD, Visa, BTAD, DAGM and DTD Synthetic. 
-| Metric    | Dataset        | WinCLIP     | VAND        | Ours        |
+| Metric    | Dataset        | WinCLIP     | April-GAN        | Ours        |
 |-----------|----------------|-------------|-------------|-------------|
 | AC AUROC  | MVTec-AD       | 95.2±1.3    | 92.8±0.2    | 96.8±0.3    |
 |           | Visa           | 87.3±1.8    | 92.6±0.4    | 92.9±0.2    |
@@ -111,7 +111,7 @@ Performance Comparison on MVTec-AD and Visa Datasets.
 | April-GAN     | CVPR 2023 VAND workshop | 92.8±0.2          | 95.9±0.0          | 91.8±0.1        | 92.6±0.4      | 96.2±0.0      | 90.2±0.1    |
 | PromptAD      | CVPR 2024               | 96.6±0.9          | 96.5±0.2          | -               | 89.1±1.7      | 97.4±0.3      | -           |
 | InCTRL        | CVPR 2024               | 94.5±1.8          | -                 | -               | 87.7±1.9      | -             | -           |
-| HFWA          | Ours                    | 96.8±0.3          | 95.7±0.1          | 92.4±0.2        | 92.9±0.2      | 97.1±0.0      | 91.4±0.0    |
+| SOWA          | Ours                    | 96.8±0.3          | 95.7±0.1          | 92.4±0.2        | 92.9±0.2      | 97.1±0.0      | 91.4±0.0    |
 
 
 
