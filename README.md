@@ -13,8 +13,8 @@
 
 ## Description
 
-<div style="text-align: center;">
-  <img src="https://github.com/huzongxiang/sowa/blob/resources/fig1.png" alt="Example Image" style="width: 50%;">
+<div align="center">
+  <img src="https://github.com/huzongxiang/sowa/blob/resources/fig1.png" alt="concept" style="width: 50%;">
 </div>
 
 Visual anomaly detection is critical in industrial manufacturing, but traditional methods often rely on extensive
