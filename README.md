@@ -136,5 +136,17 @@ Hierarchical Results on MVTec-AD Dataset. A set of images showing the real outpu
 ## Inference Speed
 Inference performance comparison of different methods on a single NVIDIA RTX3070 8GB GPU.
 <div align="center">
-  <img src="https://github.com/huzongxiang/sowa/blob/resources/fig1.png" alt="speed" style="width: 80%;">
+  <img src="https://github.com/huzongxiang/sowa/blob/resources/fig9.png" alt="speed" style="width: 80%;">
 </div>
+
+
+## Citation
+Please cite the following paper if this work helps your project: 
+```
+@article{hu2024sowa,
+  title={PromptAD: Learning Prompts with only Normal Samples for Few-Shot Anomaly Detection},
+  author={Hu, Zongxiang and Zhang, zhaosheng},
+  journal={arXiv preprint arXiv:2407.03634},
+  year={2024}
+}
+```
