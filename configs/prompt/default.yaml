@@ -1,5 +1,0 @@
-# configs/prompt/default.yaml
-defaults:
-  - object
-  - state_template
-  - template
