@@ -13,7 +13,9 @@
 
 ## Description
 
-![concept](https://github.com/huzongxiang/sowa/blob/resources/fig1.png)
+<div style="text-align: center;">
+  <img src="https://github.com/huzongxiang/sowa/blob/resources/fig1.png" alt="Example Image" style="width: 50%;">
+</div>
 
 Visual anomaly detection is critical in industrial manufacturing, but traditional methods often rely on extensive
 normal datasets and custom models, limiting scalability.
