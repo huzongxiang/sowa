@@ -114,17 +114,27 @@ Performance Comparison on MVTec-AD and Visa Datasets.
 | HFWA          | Ours                    | 96.8±0.3          | 95.7±0.1          | 92.4±0.2        | 92.9±0.2      | 97.1±0.0      | 91.4±0.0    |
 
 
-Comparisons with few-shot anomaly detection methods on datasets of MVTec-AD, Visa, BTAD, DAGM and DTD Synthetic.
-![few-shot](https://github.com/huzongxiang/sowa/blob/resources/fig5.png)
+
+Comparisons with few-shot anomaly detection methods on datasets of MVTec-AD, Visa, BTAD, DAGM and DTD Synthetic. 
+<div align="center">
+  <img src="https://github.com/huzongxiang/sowa/blob/resources/fig5.png" alt="few-shot" style="width: 70%;">
+</div>
+
 
 ## Visualization
-Visualization results under the few-shot setting (K=4).
-![visualize](https://github.com/huzongxiang/sowa/blob/resources/fig6.png)
+Visualization results under the few-shot setting (K=4). 
+<div align="center">
+  <img src="https://github.com/huzongxiang/sowa/blob/resources/fig6.png" alt="concept" style="width: 70%;">
+</div>
+
 
 ## Mechanism
 Hierarchical Results on MVTec-AD Dataset. A set of images showing the real outputs of the model, illustrating how different layers (H1 to H4) process various feature modes. Each row represents a different sample, with columns showing the original image, segmentation mask, heatmap, and feature outputs from H1 to H4, and fusion.
 ![mechanism](https://github.com/huzongxiang/sowa/blob/resources/fig7.png)
 
+
 ## Inference Speed
 Inference performance comparison of different methods on a single NVIDIA RTX3070 8GB GPU.
-![mechanism](https://github.com/huzongxiang/sowa/blob/resources/fig9.png)
+<div align="center">
+  <img src="https://github.com/huzongxiang/sowa/blob/resources/fig1.png" alt="speed" style="width: 80%;">
+</div>
