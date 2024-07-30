@@ -99,7 +99,7 @@ Comparisons with few-shot (K=4) anomaly detection methods on datasets of MVTec-A
 |           | DAGM           | 82.4±0.3    | 77.8±0.9    | 94.4±0.1    |
 |           | DTD-Synthetic  | 90.1±0.5    | 92.2±0.0    | 96.6±0.1    | 
 
-
+​<!-- 零宽空格 -->
 
 Performance Comparison on MVTec-AD and Visa Datasets. 
 | Method        | Source                  | MVTec-AD AC AUROC | MVTec-AD AS AUROC | MVTec-AD AS PRO | Visa AC AUROC | Visa AS AUROC | Visa AS PRO |
@@ -114,6 +114,7 @@ Performance Comparison on MVTec-AD and Visa Datasets.
 | SOWA          | Ours                    | 96.8±0.3          | 95.7±0.1          | 92.4±0.2        | 92.9±0.2      | 97.1±0.0      | 91.4±0.0    | 
 
 
+​<!-- 零宽空格 -->
 
 Comparisons with few-shot anomaly detection methods on datasets of MVTec-AD, Visa, BTAD, DAGM and DTD Synthetic. 
 <div align="center">
