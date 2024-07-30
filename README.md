@@ -144,7 +144,7 @@ Inference performance comparison of different methods on a single NVIDIA RTX3070
 Please cite the following paper if this work helps your project: 
 ```
 @article{hu2024sowa,
-  title={PromptAD: Learning Prompts with only Normal Samples for Few-Shot Anomaly Detection},
+  title={SOWA: Adapting Hierarchical Frozen Window Self-Attention to Visual-Language Models for Better Anomaly Detection},
   author={Hu, Zongxiang and Zhang, zhaosheng},
   journal={arXiv preprint arXiv:2407.03634},
   year={2024}
