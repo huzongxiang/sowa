@@ -63,15 +63,30 @@ conda activate sowa
 
 ## How to run
 
+### Train 
+
 Train model with default configuration
 
 ```bash
-# train on CPU
-python src/train.py trainer=cpu data=sowa_visa model=sowa_hfwa
+# train on mvtec
+python src/train.py trainer=gpu data=sowa_mvt model=sowa_hfwa
 
-# train on GPU
+# train on visa
 python src/train.py trainer=gpu data=sowa_visa model=sowa_hfwa
 ```
+
+### Inference 
+
+Weights can be downloaded from Huggingface Project: https://huggingface.co/zongxiang/sowa
+
+```bash
+# eval on visa
+python src/eval.py trainer=gpu data=sowa_visa model=sowa_hfwa ckpt_path=your_mvtec_ckpt model.k_shot=true data.dataset.kshot.k_shot=4
+
+# eval on mvt
+python src/eval.py trainer=gpu data=sowa_mvt model=sowa_hfwa ckpt_path=your_visa_ckpt model.k_shot=true data.dataset.kshot.k_shot=4
+```
+
 
 ## Results
 
