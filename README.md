@@ -90,7 +90,7 @@ python src/train.py trainer=gpu data=sowa_visa model=sowa_hfwa
 
 ### Inference 
 
-Weights can be downloaded from [Huggingface Project](https://huggingface.co/zongxiang/sowa/tree/main)
+Weights can be downloaded from [Huggingface Project](https://huggingface.co/zongxiang/sowa/tree/main) or [Baidu Pan](https://pan.baidu.com/s/1kxgGBapwOFJ0vfr7cRc1HA?pwd=5jir)
 
 ```bash
 # eval on visa
