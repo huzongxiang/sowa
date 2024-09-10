@@ -63,6 +63,19 @@ conda activate sowa
 
 ## How to run
 
+### Data
+
+Process the downloaded data using data [scripts](https://huggingface.co/zongxiang/sowa/tree/main), specifying the data set location in the configuration file [sowa_mvt.yaml](https://github.com/huzongxiang/sowa/blob/main/configs/data/sowa_mvt.yaml)
+
+---
+_target_: src.data.anomaly_clip_datamodule.AnomalyCLIPDataModule
+data_dir:
+  train: /home/hzx/Projects/Data/Visa
+  valid: /home/hzx/Projects/Data/MVTec-AD
+  test: /home/hzx/Projects/Data/MVTec-AD
+---
+
+
 ### Train 
 
 Train model with default configuration
@@ -77,7 +90,7 @@ python src/train.py trainer=gpu data=sowa_visa model=sowa_hfwa
 
 ### Inference 
 
-Weights can be downloaded from Huggingface Project: https://huggingface.co/zongxiang/sowa
+Weights can be downloaded from [Huggingface Project]:(https://huggingface.co/zongxiang/sowa)
 
 ```bash
 # eval on visa
